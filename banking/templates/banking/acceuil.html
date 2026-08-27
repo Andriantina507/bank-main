@@ -1,0 +1,21 @@
+{% extends 'banking/base.html' %}
+{% load static %}
+
+
+{% block title %}Accueil{% endblock %}
+
+
+{% block extra_css %}<link rel="stylesheet" href="{% static 'banking/acceuil.css' %}">{% endblock %}
+        
+{% block right %}
+        <div class="right-section">
+            <h2>Bienvenue chez <span>NovaBank</span></h2>
+            <p>Choisissez votre espace :</p>
+
+            <div class="buttons">
+                <a href="{% url 'login_client' %}" class="btn client">Je suis un client</a>
+                <a href="{% url 'login_admin' %}" class="btn admin">Je suis un administrateur</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
